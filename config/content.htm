@@ -1007,6 +1007,7 @@ int main() {
 <p>cc euler_gnuplot_msd_ex1 -lgd -lm</p>
 <p>./a.out</p>
 <h1>ANSIC</h1>
+<h2><span>Exercises-1</span></h2>
 <p>1.使用矩形的高度和寬度作為輸入來列印矩形的周長</p>
 <pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;     // Include the standard input/output header file.
 int main() {
@@ -1189,7 +1190,73 @@ int main() {
   return 0;
 }
 </pre>
-<p><img alt="" height="86" src="/images/螢幕擷取畫面 2023-12-31 024947.png" width="400"/></p><h1>Brython</h1>
+<p><img alt="" height="86" src="/images/螢幕擷取畫面 2023-12-31 024947.png" width="400"/></p>
+<p>8.<span>逆向列印下列字元</span></p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main() 
+{
+    // Declare and initialize character variables
+    char char1 = 'X';
+    char char2 = 'M';
+    char char3 = 'L';
+
+    // Print the original and reversed characters
+    printf("The reverse of %c%c%c is %c%c%c\n",
+        char1, char2, char3,
+        char3, char2, char1);
+
+    return(0);
+}
+</pre>
+<p><img alt="" height="70" src="/images/螢幕擷取畫面 2023-12-31 025944.png" width="400"/></p>
+<p>9.<span>接受使用者提供的兩個整數併計算這兩個整數的和</span></p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+int main() 
+{
+    int x, y, sum; // Declare variables for two integers and their sum
+    
+    // Prompt user for input and store in 'x'
+    printf("\nInput the first integer: "); 
+    scanf("%d", &amp;x);
+    
+    // Prompt user for input and store in 'y'
+    printf("\nInput the second integer: ");
+    scanf("%d", &amp;y);
+    
+    sum = x + y; // Calculate the sum of 'x' and 'y'
+    
+    // Print the sum
+    printf("\nSum of the above two integers = %d\n", sum);
+    
+    return 0; // Indicate successful execution
+}
+
+</pre>
+<p><img alt="" height="141" src="/images/螢幕擷取畫面 2023-12-31 030742.png" width="400"/></p>
+<p>10.<span>將指定的日期轉換為年、週和日</span></p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main()
+{
+    int days, years, weeks;
+
+    days = 1329; // Total number of days
+
+    // Converts days to years, weeks and days
+    years = days/365; // Calculate years
+    weeks = (days % 365)/7; // Calculate weeks
+    days = days - ((years*365) + (weeks*7)); // Calculate remaining days
+
+    // Print the results
+    printf("Years: %d\n", years);
+    printf("Weeks: %d\n", weeks);
+    printf("Days: %d \n", days);
+
+    return 0;
+}
+</pre>
+<p><img alt="" height="98" src="/images/螢幕擷取畫面 2023-12-31 031044.png" width="400"/></p><h1>Brython</h1>
 <p><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">https://en.wikipedia.org/wiki/Python_(programming_language)</a></p>
 <h4>Examples:</h4>
 <p style="padding-left: 30px;"><a href="https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d">https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d</a></p>
