@@ -1479,6 +1479,7 @@ int main()
 </pre>
 <p><img alt="" height="98" src="/images/螢幕擷取畫面 2023-12-31 031044.png" width="400"/></p>
 <h1>c_ex</h1>
+<h2>練習二</h2>
 <p>1.</p>
 <pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
 void main()
@@ -1587,7 +1588,54 @@ printf("%d \n", ~a ); /* A 的補數運算 */
 }
 </pre>
 <p><img alt="" height="179" src="/images/螢幕擷取畫面 2023-12-31 164515.png" width="400"/></p>
-<p>9.</p><h1>Brython</h1>
+<p>9.</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+void main()
+{
+printf("%d\n", 1 || 0 );
+printf("%d\n", 0 || 0 );
+printf("%d\n", 2 || 2 );
+}</pre>
+<p><img alt="" height="107" src="/images/螢幕擷取畫面 2023-12-31 164946.png" width="400"/></p>
+<p>10.</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false"> #include &lt;stdio.h&gt;
+void main()
+{
+char a;
+printf( " The size of int is %d \n", sizeof(int) );
+printf( " The size of char a is %d \n", sizeof(a) );
+}</pre>
+<p><img alt="" height="305" src="/images/螢幕擷取畫面 2023-12-31 165458.png" width="400"/></p>
+<p><span>在可攜程式環境中以 SciTE + Tiny C Compiler 編譯系統, 使用 Tools - Go 類編譯方式執行做</span><a href="https://link.springer.com/content/pdf/10.1007/978-1-4842-5064-8_1.pdf?pdf=inline%20link">Introduction to C</a><span>.</span></p>
+<p><span>1.</span></p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include&lt;stdio.h&gt;
+void main()
+{
+int a,b;
+a = 15;
+b = 1;
+printf("%d \n", a | b ); /* a OR b */
+printf("%d \n", a &amp; b ); /* a AND b */
+printf("%d \n", a ^ b ); /* a XOR b */
+printf("%d \n", a &lt;&lt; 1 ); /* a 位元左移 1 位 */
+printf("%d \n", a &gt;&gt; 1 ); /* a 位元右移一位 */
+printf("%d \n", ~a ); /* A 的補數運算 */
+}
+</pre>
+<p><img alt="" height="504" src="/images/螢幕擷取畫面 2023-12-31 172918.png" width="400"/></p>
+<p>2.</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+void main()
+{
+int a;
+a = 3;
+printf("%d\n", !a );
+a = 0;
+printf("%d\n", !a );
+}</pre>
+<p><img alt="" height="448" src="/images/螢幕擷取畫面 2023-12-31 173332.png" width="400"/></p>
+<h2>Exercises</h2>
+<p>1.</p><h1>Brython</h1>
 <p><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">https://en.wikipedia.org/wiki/Python_(programming_language)</a></p>
 <h4>Examples:</h4>
 <p style="padding-left: 30px;"><a href="https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d">https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d</a></p>

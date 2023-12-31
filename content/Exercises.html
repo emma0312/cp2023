@@ -142,257 +142,85 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">ANSIC << <a href='ANSIC.html'>Previous</a> <a href='c_ex.html'>Next</a> >> c_ex<br /><h1>練習一</h1>
-<p>1.使用矩形的高度和寬度作為輸入來列印矩形的周長</p>
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;     // Include the standard input/output header file.
-int main() {
-    float rec_width;         /* Declare variable 'rec_width' to store the width of the rectangle */
-    float rec_height;        /* Declare variable 'rec_height' to store the height of the rectangle */
-    float rec_perimeter;     /* Declare variable 'rec_perimeter' to store the perimeter (to be computed) */
-
-    // Prompt the user to input the height of the rectangle.
-    printf("Input the height of the Rectangle : ");
-    scanf("%f", &amp;rec_height);  // Read the value of 'rec_height' from the user.
-
-    // Prompt the user to input the width of the rectangle.
-    printf("Input the width of the Rectangle : ");
-    scanf("%f", &amp;rec_width);  // Read the value of 'rec_width' from the user.
-
-    // Calculate the perimeter of the rectangle using the formula: perimeter = 2 * ( width + height )
-    rec_perimeter = 2.0 * (rec_height + rec_width);
-
-    // Print the calculated perimeter of the rectangle.
-    printf("Perimeter of the Rectangle is : %f\n", rec_perimeter);
-
-    return 0;  // Indicate successful program execution.
-}
-</pre>
-<p><img alt="" height="251" src="./../images/螢幕擷取畫面 2023-12-31 005457.png" width="400"/></p>
-<p>2.將溫度從攝氏度轉換為華氏度</p>
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;     // Include the standard input/output header file.
-
-float temp_f;     /* degrees fahrenheit */
-float temp_c;     /* degrees centigrade */
-char line_text[50];        /* a line of input */
-
-int main() {
-printf("Input a temperature (in Centigrade): ");  // Prompt the user to input a temperature in centigrade.
-fgets(line_text, sizeof(line_text), stdin);      // Read a line of input from the user and store it in 'line_text'.
-sscanf(line_text, "%f", &amp;temp_c);               // Convert the input from 'line_text' to a float and store it in 'temp_c'.
-
-temp_f = ((9.0 / 5.0) * temp_c) + 32.0;         // Convert temperature from centigrade to fahrenheit and store it in 'temp_f'.
-printf("%f degrees Fahrenheit.\n", temp_f);    // Print the temperature in fahrenheit.
-
-return(0);   // Return 0 to indicate successful execution of the program.
-}</pre>
-<p><img alt="" height="147" src="./../images/螢幕擷取畫面 2023-12-31 011400.png" width="400"/></p>
-<p>3.<span>讀取名字、姓氏和出生年份，並依序顯示姓名和年份</span></p>
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;    // Include the standard input/output header file.
-
-int main() {
-char firstname[20], lastname[20];   // Declare character arrays for first name and last name with a maximum size of 20 characters each.
-int bir_year;   // Declare an integer variable 'bir_year' to store the year of birth.
-
-printf("Input your firstname: ");   // Prompt the user to input their first name.
-scanf("%s", firstname);   // Read and store the user's input in 'firstname'.
-
-printf("Input your lastname: ");   // Prompt the user to input their last name.
-scanf("%s", lastname);   // Read and store the user's input in 'lastname'.
-
-printf("Input your year of birth: ");   // Prompt the user to input their year of birth.
-scanf("%d", &amp;bir_year);   // Read and store the user's input in 'bir_year'.
-
-printf("%s %s %d\n", firstname, lastname, bir_year);   // Print the first name, last name, and year of birth.
-
-return 0;   // Return 0 to indicate successful execution of the program.
-}</pre>
-<p><img alt="" height="326" src="./../images/螢幕擷取畫面 2023-12-31 013420.png" width="400"/></p>
-<p>4.<span>顯示整數的立方</span></p>
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;  // Include the standard input/output header file.
-int main() {
-    int i, ctr;  // Declare variables 'i' for loop counter and 'ctr' for user input.
-
-    printf("Input number of terms : ");  // Print a message to prompt user input.
-    scanf("%d", &amp;ctr);  // Read the value of 'ctr' from the user.
-
-    for (i = 1; i &lt;= ctr; i++) {  // Start a for loop to iterate 'ctr' times.
-        printf("Number is : %d and cube of the %d is :%d \n", i, i, (i * i * i));  // Print the number, its cube, and message.
-    }
-    return 0;
-}</pre>
-<p><img alt="" height="224" src="./../images/螢幕擷取畫面 2023-12-31 014453.png" width="400"/></p>
-<p>5.<span>計算前 10 個自然數的和</span></p>
+    <div id="tipue_search_content">練習二 << <a href='練習二.html'>Previous</a> <a href='Brython.html'>Next</a> >> Brython<br /><h1>Exercises</h1>
+<p>1.</p>
 <pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
-int main()
+void main()
 {
-    int  j, sum = 0;
-
-    printf("The first 10 natural number is :\n");
-
-    for (j = 1; j &lt;= 10; j++)
-    {
-        sum = sum + j;
-        printf("%d ",j);    
-    }
-    printf("\nThe Sum is : %d\n", sum);
+printf("%d\n", 1 &amp;&amp; 3 );
+printf("%d\n", 0 &amp;&amp; 0 );
+printf("%d\n", 2 &amp;&amp; 2 );
 }</pre>
-<p><img alt="" height="102" src="./../images/螢幕擷取畫面 2023-12-31 023419.png" width="400"/></p>
-<p>6.<span>使用回呼函數計算整數陣列的總和或乘積</span></p>
+<p><img alt="" height="133" src="./../images/螢幕擷取畫面 2023-12-31 174135.png" width="400"/></p>
+<p>2.</p>
 <pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
-#include &lt;stdlib.h&gt;
-
-typedef int( * operation_func_t)(int, int);
-int calculate(int * arr, size_t n, int initial_value, operation_func_t operation) {
-  int result = initial_value;
-  for (size_t i = 0; i &lt; n; i++) {
-    result = operation(result, arr[i]);
-  }
-  return result;
-}
-
-int sum(int a, int b) {
-  return a + b;
-}
-
-int product(int a, int b) {
-  return a * b;
-}
-int main() {
-  int arr[] = {
-    10,
-    20,
-    30,
-    40,
-    50,
-    60
-  };
-  size_t n = sizeof(arr) / sizeof(int);
-  printf("Original array elements: ");
-  for (size_t i = 0; i &lt; n; i++) {
-    printf("%d ", arr[i]);
-  }
-  int sum_result = calculate(arr, n, 0, sum);
-  printf("\nSum: %d", sum_result);
-  int product_result = calculate(arr, n, 1, product);
-  printf("\nProduct: %d", product_result);
-
-  return 0;
-}
-</pre>
-<p><img alt="" height="90" src="./../images/螢幕擷取畫面 2023-12-31 024427.png" width="400"/></p>
-<p>7.<span>使用回呼函數對數組的元素進行打亂，以產生用於交換的隨機數</span></p>
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
-
-#include &lt;stdlib.h&gt;
-
-#include &lt;time.h&gt;
-
-void shuffle(int * array, size_t n, int( * rand_func)(void)) {
-  for (int i = n - 1; i &gt; 0; i--) {
-    int j = rand_func() % (i + 1);
-    int tmp = array[i];
-    array[i] = array[j];
-    array[j] = tmp;
-  }
-}
-
-int main() {
-  int arr[] = {
-    1,
-    2,
-    3,
-    4,
-    5
-  };
-  size_t n = sizeof(arr) / sizeof(int);
-  printf("Original array elements: ");
-  for (size_t i = 0; i &lt; n; i++) {
-    printf("%d ", arr[i]);
-  }
-
-  // Seed the random number generator
-  srand(time(NULL));
-
-  // Shuffle the array using rand() as the random number generator
-  shuffle(arr, n, rand);
-
-  // Print the shuffled array
-  printf("\nShuffled array elements: ");
-  for (int i = 0; i &lt; n; i++) {
-    printf("%d ", arr[i]);
-  }
-  printf("\n");
-  return 0;
-}
-</pre>
-<p><img alt="" height="86" src="./../images/螢幕擷取畫面 2023-12-31 024947.png" width="400"/></p>
-<p>8.<span>逆向列印下列字元</span></p>
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
-
-int main() 
+float circle( int r ); /* 宣告 circle 的 prototype */
+void main()
 {
-    // Declare and initialize character variables
-    char char1 = 'X';
-    char char2 = 'M';
-    char char3 = 'L';
-
-    // Print the original and reversed characters
-    printf("The reverse of %c%c%c is %c%c%c\n",
-        char1, char2, char3,
-        char3, char2, char1);
-
-    return(0);
+float answer;
+answer = circle(8);
+printf( " 圓周長度是 %f", answer );
 }
-</pre>
-<p><img alt="" height="70" src="./../images/螢幕擷取畫面 2023-12-31 025944.png" width="400"/></p>
-<p>9.<span>接受使用者提供的兩個整數併計算這兩個整數的和</span></p>
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
-int main() 
+/* ====================
+ circle 函數, 計算 circle 的圓周長
+==================== */
+float circle( int r )
 {
-    int x, y, sum; // Declare variables for two integers and their sum
-    
-    // Prompt user for input and store in 'x'
-    printf("\nInput the first integer: "); 
-    scanf("%d", &amp;x);
-    
-    // Prompt user for input and store in 'y'
-    printf("\nInput the second integer: ");
-    scanf("%d", &amp;y);
-    
-    sum = x + y; // Calculate the sum of 'x' and 'y'
-    
-    // Print the sum
-    printf("\nSum of the above two integers = %d\n", sum);
-    
-    return 0; // Indicate successful execution
-}
-
-</pre>
-<p><img alt="" height="141" src="./../images/螢幕擷取畫面 2023-12-31 030742.png" width="400"/></p>
-<p>10.<span>將指定的日期轉換為年、週和日</span></p>
+float result;
+result = 3.14159 * (double)2 * r;
+return ( result );
+}</pre>
+<p><img alt="" height="58" src="./../images/螢幕擷取畫面 2023-12-31 174404.png" width="400"/></p>
+<p>3.</p>
 <pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
-
-int main()
+void main()
 {
-    int days, years, weeks;
-
-    days = 1329; // Total number of days
-
-    // Converts days to years, weeks and days
-    years = days/365; // Calculate years
-    weeks = (days % 365)/7; // Calculate weeks
-    days = days - ((years*365) + (weeks*7)); // Calculate remaining days
-
-    // Print the results
-    printf("Years: %d\n", years);
-    printf("Weeks: %d\n", weeks);
-    printf("Days: %d \n", days);
-
-    return 0;
+char c;
+printf( "Input a char:" );
+scanf( "%c", &amp;c );
+switch( c )
+{
+case 'a':
+printf(" you pressed a ");
+break;
+case 'b':
+printf(" you pressed b ");
+break;
+case 'c':
+printf(" you pressed c ");
+break;
+default:
+printf(" not a, b, c ");
+break;
 }
-</pre>
-<p><img alt="" height="98" src="./../images/螢幕擷取畫面 2023-12-31 031044.png" width="400"/></p>
-<br />ANSIC << <a href='ANSIC.html'>Previous</a> <a href='c_ex.html'>Next</a> >> c_ex</div>
+}</pre>
+<p><img alt="" height="125" src="./../images/螢幕擷取畫面 2023-12-31 175018.png" width="400"/></p>
+<p>4.</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+void main()
+{
+int i, j;
+for ( i = 0, j = 10; i &lt; 6; i++, j++ )
+{
+printf( "i = %d, ", i );
+printf( "j = %d \n", j );
+}
+}</pre>
+<p><img alt="" height="183" src="./../images/螢幕擷取畫面 2023-12-31 175738.png" width="400"/></p>
+<p>5.</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+void main()
+{
+int i, j;
+j = 10; /* 迴圈外先設定初值 */
+for ( i = 0; i &lt; 6; i++ )
+{
+printf( "i = %d, ", i );
+printf( "j = %d \n", j );
+j++; /* 迴圈後加上變更運算式 */
+}
+}</pre>
+<p><img alt="" height="198" src="./../images/螢幕擷取畫面 2023-12-31 180018.png" width="400"/></p><br />練習二 << <a href='練習二.html'>Previous</a> <a href='Brython.html'>Next</a> >> Brython</div>
         
     <!-- footer -->
       <div class="container">
