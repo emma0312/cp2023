@@ -220,7 +220,89 @@ printf( "j = %d \n", j );
 j++; /* 迴圈後加上變更運算式 */
 }
 }</pre>
-<p><img alt="" height="198" src="./../images/螢幕擷取畫面 2023-12-31 180018.png" width="400"/></p><br />練習二 << <a href='練習二.html'>Previous</a> <a href='Brython.html'>Next</a> >> Brython</div>
+<p><img alt="" height="198" src="./../images/螢幕擷取畫面 2023-12-31 180018.png" width="400"/></p>
+<p>6.</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+void main()
+{
+int i, j;
+i = 0; j = 10; /* 迴圈外先設定初值 */
+while( i &lt; 6 )
+{
+printf( "i = %d, ", i );
+printf( "j = %d \n", j );
+i++;
+j++; 
+}
+}</pre>
+<p><img alt="" height="173" src="./../images/螢幕擷取畫面 2023-12-31 181320.png" width="400"/></p>
+<p>7.</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+int main()
+{
+int grade[5]; /* size = 5 的 array */
+int i;
+grade[0] = 75; /* 1st element */
+grade[1] = 80; /* 2nd element */
+grade[2] = 85; /* 3rd element */
+grade[3] = 70; /* 4th element */
+grade[4] = 90; /* 5th element */
+for( i = 0; i &lt; 5; i ++ )
+{
+printf("Number %d = %d\n", i, grade[ i ] );
+}
+return 0;
+}</pre>
+<p><img alt="" height="133" src="./../images/螢幕擷取畫面 2023-12-31 181508.png" width="400"/></p>
+<p>8.</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main() {
+    char ch; 
+    printf("input a char: ");
+    scanf("%c", &amp;ch);
+    if (ch == 'a') {
+        printf("You pressed 'a'\n");
+    }
+    return 0;
+}</pre>
+<p><img alt="" src="./../images/螢幕擷取畫面 2023-12-31 182419.png" width="400"/></p>
+<p>9.</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main() {
+    char ch; 
+    printf("input a char: ");
+    scanf("%c", &amp;ch);
+    if (ch == 'a') {
+        printf("You pressed 'a'\n");
+    } else {
+        printf("You didn't press 'a'\n");
+    }
+    return 0;
+}</pre>
+<p><img alt="" height="118" src="./../images/螢幕擷取畫面 2023-12-31 182502.png" width="400"/></p>
+<p>10.</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main() {
+    int i; 
+    printf("input an integer: ");
+    scanf("%d", &amp;i);
+
+    if (i &lt; 100) {
+        printf("i &lt; 100\n");
+    } else {
+        if ((i &gt;= 100) &amp;&amp; (i &lt; 200)) {
+            printf("i &gt;= 100 and i &lt; 200\n");
+        } else {
+            printf("i &gt;= 200\n");
+        }
+    }
+
+    return 0;
+}</pre>
+<p><img alt="" height="117" src="./../images/螢幕擷取畫面 2023-12-31 182544.png" width="400"/></p><br />練習二 << <a href='練習二.html'>Previous</a> <a href='Brython.html'>Next</a> >> Brython</div>
         
     <!-- footer -->
       <div class="container">

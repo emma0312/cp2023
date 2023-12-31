@@ -1635,7 +1635,84 @@ printf("%d\n", !a );
 }</pre>
 <p><img alt="" height="448" src="/images/螢幕擷取畫面 2023-12-31 173332.png" width="400"/></p>
 <h2>Exercises</h2>
-<p>1.</p><h1>Brython</h1>
+<p>1.</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+void main()
+{
+printf("%d\n", 1 &amp;&amp; 3 );
+printf("%d\n", 0 &amp;&amp; 0 );
+printf("%d\n", 2 &amp;&amp; 2 );
+}</pre>
+<p><img alt="" height="133" src="/images/螢幕擷取畫面 2023-12-31 174135.png" width="400"/></p>
+<p>2.</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+float circle( int r ); /* 宣告 circle 的 prototype */
+void main()
+{
+float answer;
+answer = circle(8);
+printf( " 圓周長度是 %f", answer );
+}
+/* ====================
+ circle 函數, 計算 circle 的圓周長
+==================== */
+float circle( int r )
+{
+float result;
+result = 3.14159 * (double)2 * r;
+return ( result );
+}</pre>
+<p><img alt="" height="58" src="/images/螢幕擷取畫面 2023-12-31 174404.png" width="400"/></p>
+<p>3.</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+void main()
+{
+char c;
+printf( "Input a char:" );
+scanf( "%c", &amp;c );
+switch( c )
+{
+case 'a':
+printf(" you pressed a ");
+break;
+case 'b':
+printf(" you pressed b ");
+break;
+case 'c':
+printf(" you pressed c ");
+break;
+default:
+printf(" not a, b, c ");
+break;
+}
+}</pre>
+<p><img alt="" height="125" src="/images/螢幕擷取畫面 2023-12-31 175018.png" width="400"/></p>
+<p>4.</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+void main()
+{
+int i, j;
+for ( i = 0, j = 10; i &lt; 6; i++, j++ )
+{
+printf( "i = %d, ", i );
+printf( "j = %d \n", j );
+}
+}</pre>
+<p><img alt="" height="183" src="/images/螢幕擷取畫面 2023-12-31 175738.png" width="400"/></p>
+<p>5.</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+void main()
+{
+int i, j;
+j = 10; /* 迴圈外先設定初值 */
+for ( i = 0; i &lt; 6; i++ )
+{
+printf( "i = %d, ", i );
+printf( "j = %d \n", j );
+j++; /* 迴圈後加上變更運算式 */
+}
+}</pre>
+<p><img alt="" height="198" src="/images/螢幕擷取畫面 2023-12-31 180018.png" width="400"/></p><h1>Brython</h1>
 <p><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">https://en.wikipedia.org/wiki/Python_(programming_language)</a></p>
 <h4>Examples:</h4>
 <p style="padding-left: 30px;"><a href="https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d">https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d</a></p>
