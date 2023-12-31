@@ -1006,8 +1006,146 @@ int main() {
 <p>cd downloads</p>
 <p>cc euler_gnuplot_msd_ex1 -lgd -lm</p>
 <p>./a.out</p>
-<h1>ANSIC</h1>
-<h2><span>Exercises-1</span></h2>
+<h1>w15</h1>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+#include &lt;gd.h&gt;
+#include &lt;math.h&gt;
+
+void draw_exam_flag(gdImagePtr img);
+void draw_white_sun(gdImagePtr img, int center_x, int center_y, int sun_radius, int white, int red, int blue);
+
+int main() {
+    // width 3: height 2
+    int width = 1200;
+    int height = (int)(width*2.0 / 3.0);
+
+    gdImagePtr img = gdImageCreateTrueColor(width, height);
+    gdImageAlphaBlending(img, 0);
+
+    draw_exam_flag(img);
+
+    FILE *outputFile = fopen("./exam_flag.png", "wb");
+    if (outputFile == NULL) {
+        fprintf(stderr, "Error opening the output file.\n");
+        return 1;
+    }
+    gdImagePngEx(img, outputFile, 9);
+    fclose(outputFile);
+    gdImageDestroy(img);
+    return 0;
+}
+
+void draw_exam_flag(gdImagePtr img) {
+    int width = gdImageSX(img);
+    int height = gdImageSY(img);
+    int red, white, blue;
+    int center_x = (int)(width/4);
+    int center_y = (int)(height/4);
+    int sun_radius = (int)(width/8);
+    int lineColor = gdImageColorAllocate(img, 255, 255, 255);
+
+  // 畫一條線
+    int x1 = 429;
+    int y1 = 125;
+    int x2 = 170;
+    int y2 = 274;
+
+    int x3 = 279;
+    int y3 = 165;
+    int x4 = 170;
+    int y4 = 274;
+
+    int x5 = 279;
+    int y5 = 165;
+    int x6 = 429;
+    int y6 = 125;
+
+    // Colors for the flag
+    red = gdImageColorAllocate(img, 242, 0, 0); // Red color
+    white = gdImageColorAllocate(img, 255, 255, 255); // White stripes
+    blue = gdImageColorAllocate(img, 0, 41, 204); // Blue
+
+    // 繪製紅色矩形區域
+    gdImageFilledRectangle(img, 0, 0, width, height, red);
+
+    // 繪製藍色矩形區域
+    gdImageFilledRectangle(img, 0, 0, (int)(width/2.0), (int)(height/2.0), blue);
+
+    gdImageLine(img, x1, y1, x2, y2, lineColor);
+
+    gdImageLine(img, x3, y3, x4, y4, lineColor);
+
+    gdImageLine(img, x5, y5, x6, y6, lineColor);
+
+    return 0;
+}</pre>
+<p><img alt="" height="267" src="/images/exam_flag.png" width="400"/></p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+#include &lt;gd.h&gt;
+#include &lt;math.h&gt;
+
+void draw_roc_flag(gdImagePtr img);
+
+int main() {
+    int width = 1200;
+    int height = (int)(width * 2.0 / 3.0);
+
+    gdImagePtr img = gdImageCreateTrueColor(width, height);
+    gdImageAlphaBlending(img, 0);
+
+    draw_roc_flag(img);
+
+    FILE *outputFile = fopen("roc_flag_in_gd.png", "wb");
+    if (outputFile == NULL) {
+        fprintf(stderr, "Error opening the output file.\n");
+        return 1;
+    }
+    gdImagePngEx(img, outputFile, 9);
+    fclose(outputFile);
+    gdImageDestroy(img);
+    return 0;
+}
+
+void draw_roc_flag(gdImagePtr img) {
+    int width = gdImageSX(img);
+    int height = gdImageSY(img);
+    int red, white, blue;
+    int center_x = (int)(width / 4);
+    int center_y = (int)(height / 4);
+    int sun_radius = (int)(width / 8);
+    int white_circle_dia = sun_radius;
+    int blue_circle_dia = white_circle_dia + white_circle_dia * 2 / 15;
+
+    red = gdImageColorAllocate(img, 255, 0, 0);
+    white = gdImageColorAllocate(img, 255, 255, 255);
+    blue = gdImageColorAllocate(img, 0, 0, 149);
+
+    gdImageFilledRectangle(img, 0, 0, width, height, red);
+    gdImageFilledRectangle(img, 0, 0, (int)(width / 2.0), (int)(height / 2.0), blue);
+
+    // 利用一個藍色大圓與白色小圓畫出藍色環狀
+    gdImageFilledEllipse(img, center_x, center_y, blue_circle_dia, blue_circle_dia, blue);
+    gdImageFilledEllipse(img, center_x, center_y, white_circle_dia, white_circle_dia, white);
+
+    // 不含太陽的部分
+
+    // 連接第二組ABED的白線
+    int ax = 429;
+    int ay = 125;
+    int bx = 279;
+    int by = 165;
+    int ex = 170;
+    int ey = 274;
+    int dx = 170;
+    int dy = 274;
+
+    gdImageLine(img, ax, ay, bx, by, white);
+    gdImageLine(img, bx, by, ex, ey, white);
+    gdImageLine(img, ex, ey, dx, dy, white);
+    gdImageLine(img, dx, dy, ax, ay, white);
+}</pre>
+<p><img alt="" height="267" src="/images/roc_flag_in_gd.png" width="400"/></p><h1>ANSIC</h1>
+<h2>練習一</h2>
 <p>1.使用矩形的高度和寬度作為輸入來列印矩形的周長</p>
 <pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;     // Include the standard input/output header file.
 int main() {
@@ -1256,7 +1394,8 @@ int main()
     return 0;
 }
 </pre>
-<p><img alt="" height="98" src="/images/螢幕擷取畫面 2023-12-31 031044.png" width="400"/></p><h1>Brython</h1>
+<p><img alt="" height="98" src="/images/螢幕擷取畫面 2023-12-31 031044.png" width="400"/></p>
+<h1>Brython</h1>
 <p><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">https://en.wikipedia.org/wiki/Python_(programming_language)</a></p>
 <h4>Examples:</h4>
 <p style="padding-left: 30px;"><a href="https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d">https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d</a></p>
